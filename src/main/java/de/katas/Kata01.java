@@ -1,9 +1,5 @@
 package de.katas;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
-
 /**
  * permutation-in-string
  * Example 1:
@@ -17,8 +13,16 @@ import java.util.Map.Entry;
  * Input: s1 = "ab", s2 = "eidboaoo"
  * Output: false
  * }
+ * Constraints:
+ * {@code
+ * 1 <= s1.length, s2.length <= 104
+ * s1 and s2 consist of lowercase English letters.
+ * }
  */
 public class Kata01 {
+
+  private final static int INDEX_OF_A = 'a';
+  public static final int LETTERS = 26;
 
   /**
    * Check if there is permutation of s1 in s2. For this, computes a histogram as sliding windows
@@ -31,36 +35,32 @@ public class Kata01 {
     if (s1.length() > s2.length()) {
       return false;
     }
+    int[] histS1 = computeCharacterHistogram(s1);
 
     for (int i = 0; i < s2.length() - s1.length() + 1; ++i) {
       String substring = s2.substring(i, i + s1.length());
-      boolean t = doCheck(s1, substring);
-      if (t) {
+      int[] histS2 = computeCharacterHistogram(substring);
+
+      if (included(histS1, histS2)) {
         return true;
       }
     }
     return false;
   }
 
-  private boolean doCheck(String s1, String s2) {
-    Map<Character, Integer> histS1 = computeCharacterHistogram(s1);
-    Map<Character, Integer> histS2 = computeCharacterHistogram(s2);
+  private int[] computeCharacterHistogram(String word) {
 
-    return included(histS1, histS2);
-  }
+    int[] hist = new int[LETTERS]; // 0 by default
 
-  private Map<Character, Integer> computeCharacterHistogram(String word) {
-    Map<Character, Integer> freq = new HashMap<>();
     for (Character c:word.toCharArray()) {
-      freq.merge(c, 1, Integer::sum);
+      ++hist[c - INDEX_OF_A];
     }
-    return freq;
+    return hist;
   }
 
-  private boolean included(Map<Character, Integer> freqA, Map<Character, Integer> freqB) {
-    for (Entry<Character, Integer> entry :freqA.entrySet()) {
-      Integer freq = freqB.get(entry.getKey());
-      if (freq == null || freq < entry.getValue()) {
+  private boolean included(int[] freqS1, int[] freqS2) {
+    for (int i = 0; i < LETTERS; ++i) {
+      if (freqS1[i] > freqS2[i]) {
         return false;
       }
     }
