@@ -1,20 +1,13 @@
 package de.katas;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
- * Unit test for simple App.
+ * Tests some expected and corner cases.
  */
 public class Kata01Test {
 
-
-  /**
-   * Rigorous Test :-)
-   */
   @Test
   public void shouldAnswerWithTrue() {
     Kata01 solver = new Kata01();
@@ -23,10 +16,19 @@ public class Kata01Test {
   }
 
   @Test
-  public void computeAllPermutations() {
+  public void shouldAnswerWithFalse() {
     Kata01 solver = new Kata01();
-    String s1 = "ab", s2 = "eidbaooo";
-    List<String> r = solver.computeAllPermutations("ABC");
-    r.forEach((String s) -> System.out.println("" + s));
+    String s1 = "ab", s2 = "eidboaoo";
+    Assertions.assertFalse(solver.checkInclusion(s1, s2));
   }
+
+  @Test
+  public void wasWrongOnSubmission1() {
+    Kata01 solver = new Kata01();
+    String s1 = "dinitrophenylhydrazine", s2 = "acetylphenylhydrazine";
+    System.out.println("S1:" + s1.length());
+    System.out.println("S2:" + s2.length());
+    Assertions.assertFalse(solver.checkInclusion(s1, s2));
+  }
+
 }
