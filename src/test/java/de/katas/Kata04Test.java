@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 public class Kata04Test {
 
-
   @Test
   public void testInput01() {
     int[] nums = new int[] {1, 1, 2}; // Input array
