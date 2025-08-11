@@ -11,7 +11,7 @@ import java.util.Arrays;
  * 1) Insert a character 2) Delete a character 3) Replace a character
  * 
  */
-public class Kata03 {
+public class Kata3 {
   /**
    * 
    * 0 <= word1.length, word2.length <= 500 word1 and word2 consist of lowercase English letters.

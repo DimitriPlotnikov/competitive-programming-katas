@@ -3,7 +3,7 @@ package de.katas;
 /**
  * Remove Duplicates from Sorted Array
  */
-public class Kata04 {
+public class Kata4 {
   /**
    * @param nums Constraints: 1 <= nums.length <= 3 * 104 -100 <= nums[i] <= 100
    * 
