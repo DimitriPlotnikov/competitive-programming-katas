@@ -19,7 +19,7 @@ package de.katas;
  * s1 and s2 consist of lowercase English letters.
  * }
  */
-public class Kata01 {
+public class Kata1 {
 
   private final static int INDEX_OF_A = 'a';
   public static final int LETTERS = 26;

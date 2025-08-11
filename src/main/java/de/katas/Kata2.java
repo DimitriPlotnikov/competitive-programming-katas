@@ -3,7 +3,7 @@ package de.katas;
 /**
  * 443. String Compression
  */
-public class Kata02 {
+public class Kata2 {
   public int compress(char[] chars) {
     // Return 6, and the first 6 characters of the input array should be: ["a","2","b","2","c","3"]
     // Explanation: The groups are "aa", "bb", and "ccc". This compresses to "a2b2c3".
