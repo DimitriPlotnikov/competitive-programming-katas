@@ -9,15 +9,20 @@ package de.katas;
  */
 public class Kata7 {
   
-  public int removeDuplicates(int[] nums) {
-    int write = 1;
+	public int removeDuplicates(int[] nums) {
+	    if (nums.length <= 2) {
+	        return nums.length;
+	    }
 
-    for (int read = 1; read < nums.length; ++read) {
-      if (nums[read - 1] != nums[read]) {
-        nums[write++] = nums[read];
-      }
-    }
-    return write;
-  }
+	    int write = 2;  // first two elements are always allowed
+
+	    for (int read = 2; read < nums.length; ++read) {
+	        if (nums[read] != nums[write - 2]) {
+	            nums[write++] = nums[read];
+	        }
+	    }
+
+	    return write;
+	}
 
 }
