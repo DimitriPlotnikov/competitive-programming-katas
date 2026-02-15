@@ -22,5 +22,14 @@ public class Kata8Test {
 
 		Assertions.assertEquals(2, k);
 	}
+	
+	@Test
+	public void testInput03() {
+		int[] nums = new int[] { 6,5,5 }; // Input array
+
+		int k = new Kata8().majorityElement(nums); // Calls your implementation
+
+		Assertions.assertEquals(5, k);
+	}
 
 }
