@@ -10,16 +10,16 @@ public class Kata2 {
 
     int i = 0;
     int outputIndex = 0;
-    
+
     while (i < chars.length) {
       int charCount = 0;
       char curChar = chars[i];
- 
+
       while (i < chars.length && curChar == chars[i]) {
         ++charCount;
         ++i;
       }
-      
+
       chars[outputIndex++] = curChar;
 
       if (charCount > 1) {
@@ -30,7 +30,7 @@ public class Kata2 {
         outputIndex += charCountString.length();
       }
     }
-    
+
     return outputIndex;
   }
 

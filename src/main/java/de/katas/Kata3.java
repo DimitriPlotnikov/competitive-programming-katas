@@ -57,7 +57,7 @@ public class Kata3 {
     if (memo[n][m] != -1) {
       return memo[n][m];
     }
-    
+
     // If last characters of two strings are same, nothing much to do. Get the count for
     // remaining strings.
     if (word1.charAt(n - 1) == word2.charAt(m - 1)) {

@@ -8,21 +8,21 @@ package de.katas;
  * the same
  */
 public class Kata7 {
-  
-	public int removeDuplicates(int[] nums) {
-	    if (nums.length <= 2) {
-	        return nums.length;
-	    }
 
-	    int write = 2;  // first two elements are always allowed
+  public int removeDuplicates(int[] nums) {
+    if (nums.length <= 2) {
+      return nums.length;
+    }
 
-	    for (int read = 2; read < nums.length; ++read) {
-	        if (nums[read] != nums[write - 2]) {
-	            nums[write++] = nums[read];
-	        }
-	    }
+    int write = 2; // first two elements are always allowed
 
-	    return write;
-	}
+    for (int read = 2; read < nums.length; ++read) {
+      if (nums[read] != nums[write - 2]) {
+        nums[write++] = nums[read];
+      }
+    }
+
+    return write;
+  }
 
 }

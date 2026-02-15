@@ -1,6 +1,5 @@
 package de.katas;
 
-import java.util.Collections;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +19,7 @@ public class Kata6Test {
 
   private void assertSolution(int[] nums, int[] expectedNums, int k) {
     Assertions.assertEquals(expectedNums.length, k);
-    
+
     for (int i = 0; i < expectedNums.length; i++) {
       Assertions.assertEquals(expectedNums[i], nums[i]);
     }

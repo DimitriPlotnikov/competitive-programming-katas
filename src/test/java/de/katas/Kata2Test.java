@@ -34,7 +34,7 @@ public class Kata2Test {
     Assertions.assertEquals(4, dataLen);
     Assertions.assertTrue(compareCharArrays("ab12".toCharArray(), testData, dataLen));
   }
-  
+
   @Test
   public void testInputs4() {
     // Output: Return 4, and the first 4 characters of the input array should be: ["a","b","1","2"].
