@@ -1,9 +1,5 @@
 package de.katas;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
-
 /**
  * 169. Majority Element
  * 
@@ -13,28 +9,26 @@ import java.util.Map.Entry;
  */
 public class Kata8 {
 
+	/**
+	 * Boyer-Moore majority vote algorithm
+	 */
 	public int majorityElement(int[] nums) {
-		Map<Integer, Integer> freqs = new HashMap<>();
+		int candidate = 0;
+		int freq = 0;
 		
-		for (int i = 0; i < nums.length; ++i) {
-			Integer freq = freqs.get(nums[i]);
-			if (freq == null) {
+		for (int n:nums) {
+			if (freq == 0) {
+				candidate = n;
 				freq = 1;
 			} else {
-				++freq;
-			}
-			freqs.put(nums[i], freq);
-		}
-		
-		Entry<Integer, Integer> max = null;
-		for (Entry<Integer, Integer> freq:freqs.entrySet()) {
-			if (max == null) {
-				max = freq;
-			} else if (freq.getValue() > max.getValue()) {
-				max = freq;
+				if (n == candidate) {
+					++freq;
+				} else {
+					--freq;
+				}
 			}
 		}
-		return max.getKey();
+		return candidate;
 	}
 
 }
