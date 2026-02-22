@@ -8,6 +8,34 @@ public class Kata9 {
   public void rotate(int[] nums, int k) {
     k = k % nums.length;
 
+    // 1, 2, 3, 4 -> 4, 3, 2, 1
+    reverse(nums, 0, nums.length - 1);
+    
+    // 4, 3, 2, 1 -> 3, 4, 2, 1
+    reverse(nums, 0, k - 1);
+    
+    // 3, 4, 2, 1 -> 3, 4, 1, 2
+    reverse(nums, k, nums.length - 1);
+    
+  }
+
+  // nums = [1, 2, 3, 4]
+  // k = 2
+  // [3, 4, 1, 2]
+  public void reverse(int[] nums, int left, int right) {
+    while (left < right) {
+      int tmp = nums[left];
+      nums[left] = nums[right];
+      nums[right] = tmp;
+      ++left;
+      --right;
+    }
+  }
+
+  // naive implementation with additional memory usage for tmp data.
+  public void rotateOld(int[] nums, int k) {
+    k = k % nums.length;
+
     int buf[] = new int[k];
 
     for (int i = 0; i < k; ++i) {
