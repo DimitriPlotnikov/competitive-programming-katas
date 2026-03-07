@@ -10,13 +10,13 @@ public class Kata9 {
 
     // 1, 2, 3, 4 -> 4, 3, 2, 1
     reverse(nums, 0, nums.length - 1);
-    
+
     // 4, 3, 2, 1 -> 3, 4, 2, 1
     reverse(nums, 0, k - 1);
-    
+
     // 3, 4, 2, 1 -> 3, 4, 1, 2
     reverse(nums, k, nums.length - 1);
-    
+
   }
 
   // nums = [1, 2, 3, 4]
