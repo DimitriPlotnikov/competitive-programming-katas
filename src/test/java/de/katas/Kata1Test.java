@@ -30,5 +30,4 @@ public class Kata1Test {
     System.out.println("S2:" + s2.length());
     Assertions.assertFalse(solver.checkInclusion(s1, s2));
   }
-
 }

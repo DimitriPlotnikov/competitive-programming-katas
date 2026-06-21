@@ -31,5 +31,4 @@ public class Kata8Test {
 
     Assertions.assertEquals(5, k);
   }
-
 }

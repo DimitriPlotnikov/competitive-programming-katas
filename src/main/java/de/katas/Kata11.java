@@ -5,7 +5,7 @@ package de.katas;
  */
 public class Kata11 {
 
-  //@formatter:off
+  // @formatter:off
   /**
    * Algorithm:
    * ----------
@@ -40,10 +40,9 @@ public class Kata11 {
    * Time  : O(n)
    * Space : O(1)
    */
-  //@formatter:on
+  // @formatter:on
   public int maxProfit(int[] prices) {
     int maxProfit = 0;
-
 
     for (int i = 1; i < prices.length; ++i) {
 
@@ -53,5 +52,4 @@ public class Kata11 {
     }
     return (maxProfit > 0) ? maxProfit : 0;
   }
-
 }

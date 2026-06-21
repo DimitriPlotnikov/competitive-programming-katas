@@ -16,7 +16,6 @@ public class Kata9 {
 
     // 3, 4, 2, 1 -> 3, 4, 1, 2
     reverse(nums, k, nums.length - 1);
-
   }
 
   // nums = [1, 2, 3, 4]
@@ -81,5 +80,4 @@ public class Kata9 {
       nums[i] = buf[i];
     }
   }
-
 }

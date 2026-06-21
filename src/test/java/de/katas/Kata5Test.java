@@ -37,5 +37,4 @@ public class Kata5Test {
     solution.merge(nums1, 0, nums2, 1);
     Assertions.assertArrayEquals(expected, nums1);
   }
-
 }

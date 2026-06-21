@@ -30,5 +30,4 @@ public class Kata4Test {
       assert nums[i] == expectedNums[i];
     }
   }
-
 }

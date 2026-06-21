@@ -7,7 +7,7 @@ public class Kata13 {
 
   private static int[] memo;
 
-  //@formatter:off
+  // @formatter:off
   // i: [0,1,2,3,4]
   // v: [2,3,1,1,4]
   // i = 0:
@@ -16,7 +16,7 @@ public class Kata13 {
   // b = jump(2, v)
   // 1 + min(a,b)
   //
-  //@formatter:on
+  // @formatter:on
   public int jump(int[] nums) {
     memo = new int[nums.length];
     for (int i = 0; i < nums.length; ++i) {
@@ -47,5 +47,4 @@ public class Kata13 {
     memo[offset] = (minJumps != Integer.MAX_VALUE) ? minJumps + 1 : Integer.MAX_VALUE;
     return memo[offset];
   }
-
 }

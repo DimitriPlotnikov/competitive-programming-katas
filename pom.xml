@@ -37,7 +37,7 @@
   <build>
     <pluginManagement>
       <!-- lock down plugins versions to avoid using Maven
-			defaults (may be moved to parent pom) -->
+                  defaults (may be moved to parent pom) -->
       <plugins>
         <!-- Spotless plugin -->
         <plugin>
@@ -46,7 +46,7 @@
           <version>3.2.1</version>
         </plugin>
         <!-- clean lifecycle, see
-				https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+                        https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.4.0</version>
@@ -72,13 +72,13 @@
           <version>3.6.1</version>
         </plugin>
         <!-- default lifecycle, jar packaging: see
-				https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+                        https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.3.1</version>
         </plugin>
         <!-- site lifecycle, see
-				https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+                        https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
         <plugin>
           <artifactId>maven-site-plugin</artifactId>
           <version>3.12.1</version>
@@ -99,14 +99,17 @@
             <includes>
               <include>src/main/java/**/*.java</include>
               <!-- Check
-							application code -->
+                                          application code -->
               <include>src/test/java/**/*.java</include>
               <!-- Check
-							application tests code -->
+                                          application tests code -->
             </includes>
-            <eclipse>
-              <file>${project.basedir}/config/eclipse-java-google-style.xml</file>
-            </eclipse>
+            <googleJavaFormat>
+              <version>1.35.0</version>
+              <style>GOOGLE</style>
+              <reflowLongStrings>true</reflowLongStrings>
+              <formatJavadoc>false</formatJavadoc>
+            </googleJavaFormat>
             <importOrder/>
             <!-- standard import order -->
             <removeUnusedImports/>
@@ -116,7 +119,7 @@
           <pom>
             <sortPom>
               <!-- Use the new syntax for dependencies, plugins,
-							properties -->
+                                          properties -->
               <sortDependencies>groupId,artifactId</sortDependencies>
               <sortPlugins>groupId,artifactId</sortPlugins>
               <sortProperties>name</sortProperties>

@@ -6,7 +6,6 @@ package de.katas;
 public class Kata4 {
   /**
    * @param nums Constraints: 1 <= nums.length <= 3 * 104 -100 <= nums[i] <= 100
-   * 
    * @return nums is sorted in non-decreasing order.
    */
   public int removeDuplicates(int[] nums) {

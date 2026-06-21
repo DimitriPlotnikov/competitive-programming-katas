@@ -7,7 +7,7 @@ public class Kata5 {
 
   /**
    * Merge nums1 and nums2 into a single array sorted in non-decreasing order.
-   * 
+   *
    * @param nums1.length == m + n
    * @param nums2.length == n
    */
@@ -22,11 +22,9 @@ public class Kata5 {
       } else {
         nums1[p--] = nums2[p2--];
       }
-
     }
     while (p2 >= 0) {
       nums1[p--] = nums2[p2--];
     }
   }
-
 }

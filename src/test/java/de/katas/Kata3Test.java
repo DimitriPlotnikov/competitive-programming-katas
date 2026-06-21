@@ -32,5 +32,4 @@ public class Kata3Test {
 
     Assertions.assertEquals(6, kata03.minDistance(word1, word2));
   }
-
 }

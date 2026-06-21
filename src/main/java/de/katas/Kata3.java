@@ -5,15 +5,17 @@ import java.util.Arrays;
 /**
  * 72. Edit Distance Given two strings word1 and word2, return the minimum number of operations
  * required to convert word1 to word2.
- * 
- * You have the following three operations permitted on a word:
- * 
- * 1) Insert a character 2) Delete a character 3) Replace a character
- * 
+ *
+ * <p>You have the following three operations permitted on a word:
+ *
+ * <p>1) Insert a character 2) Delete a character 3) Replace a character
  */
 public class Kata3 {
+  public static int min(int a, int b, int c) {
+    return Math.min(Math.min(a, b), c);
+  }
+
   /**
-   * 
    * 0 <= word1.length, word2.length <= 500 word1 and word2 consist of lowercase English letters.
    * Solution: https://web.stanford.edu/class/cs124/lec/med.pdf
    */
@@ -44,7 +46,8 @@ public class Kata3 {
   }
 
   public int edit_distance_rec_memo(String word1, String word2, int n, int m, int memo[][]) {
-    // If first string is empty, the only option is to insert all characters of second string into
+    // If first string is empty, the only option is to insert all characters of second string
+    // into
     // first
     if (n == 0) {
       return m;
@@ -77,11 +80,9 @@ public class Kata3 {
   public int[][] createMemo(int rows, int cols) {
     int m = rows, n = cols;
     int[][] memo = new int[m + 1][n + 1];
-    for (int[] row : memo)
-      Arrays.fill(row, -1);
+    for (int[] row : memo) Arrays.fill(row, -1);
     return memo;
   }
-
 
   public int edit_distance_rec(String word1, String word2) {
     if (word1.isEmpty()) {
@@ -99,12 +100,6 @@ public class Kata3 {
     update = edit_distance_rec(word1.substring(1), word2.substring(1));
     insert = edit_distance_rec(word1.substring(0), word2.substring(1));
 
-
     return min(update, delete, insert) + 1;
   }
-
-  public static int min(int a, int b, int c) {
-    return Math.min(Math.min(a, b), c);
-  }
-
 }

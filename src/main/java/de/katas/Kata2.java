@@ -1,11 +1,10 @@
 package de.katas;
 
-/**
- * 443. String Compression
- */
+/** 443. String Compression */
 public class Kata2 {
   public int compress(char[] chars) {
-    // Return 6, and the first 6 characters of the input array should be: ["a","2","b","2","c","3"]
+    // Return 6, and the first 6 characters of the input array should be:
+    // ["a","2","b","2","c","3"]
     // Explanation: The groups are "aa", "bb", and "ccc". This compresses to "a2b2c3".
 
     int i = 0;
@@ -13,6 +12,7 @@ public class Kata2 {
 
     while (i < chars.length) {
       int charCount = 0;
+
       char curChar = chars[i];
 
       while (i < chars.length && curChar == chars[i]) {
@@ -33,5 +33,4 @@ public class Kata2 {
 
     return outputIndex;
   }
-
 }

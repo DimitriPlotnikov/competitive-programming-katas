@@ -5,7 +5,7 @@ package de.katas;
  */
 public class Kata10 {
 
-  //@formatter:off
+  // @formatter:off
   /**
    * LeetCode 121 – Best Time to Buy and Sell Stock
    *
@@ -67,7 +67,7 @@ public class Kata10 {
    * Final result:
    *   maxProfit = 5
    */
-  //@formatter:on
+  // @formatter:on
   public int maxProfit(int[] prices) {
     int maxProfit = 0;
     int minPrice = prices[0];
@@ -86,5 +86,4 @@ public class Kata10 {
     }
     return (maxProfit > 0) ? maxProfit : 0;
   }
-
 }
