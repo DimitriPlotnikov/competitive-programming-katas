@@ -7,7 +7,7 @@ public class Kata12 {
 
   //@formatter:off
   /**
-   * Jump Game (LeetCode 55)
+   * Jump to Game (LeetCode 55)
    *
    * Greedy approach:
    * ----------------
@@ -28,7 +28,7 @@ public class Kata12 {
    * 1. Start with maxReach = nums[0]
    * 2. Iterate through the array
    * 3. If current index i is greater than maxReach → return false
-   * 4. Otherwise update the farthest reachable position:
+   * 4. Otherwise, update the farthest reachable position:
    *
    *      maxReach = max(maxReach, i + nums[i])
    *
@@ -111,7 +111,7 @@ public class Kata12 {
       if (i > maxReach) {
         return false;
       }
-      
+
       maxReach = Math.max(maxReach, i + nums[i]);
     }
     return maxReach >= nums.length - 1;
