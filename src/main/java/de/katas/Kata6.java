@@ -6,9 +6,9 @@ package de.katas;
 public class Kata6 {
 
   /**
-   * 
+   *
    * @param nums an integer array
-   * @param val value to remove
+   * @param val  value to remove
    * @return
    */
   public int removeElement(int[] nums, int val) {
@@ -31,5 +31,4 @@ public class Kata6 {
     }
     return out;
   }
-
 }

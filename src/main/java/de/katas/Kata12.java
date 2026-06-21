@@ -5,7 +5,7 @@ package de.katas;
  */
 public class Kata12 {
 
-  //@formatter:off
+  // @formatter:off
   /**
    * Jump to Game (LeetCode 55)
    *
@@ -104,7 +104,7 @@ public class Kata12 {
    * Time  : O(n)
    * Space : O(1)
    */
-  //@formatter:on
+  // @formatter:on
   public boolean canJump(int[] nums) {
     int maxReach = nums[0];
     for (int i = 1; i < nums.length; ++i) {
@@ -116,5 +116,4 @@ public class Kata12 {
     }
     return maxReach >= nums.length - 1;
   }
-
 }

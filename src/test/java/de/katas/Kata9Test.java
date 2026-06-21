@@ -62,6 +62,4 @@ public class Kata9Test {
 
     Assertions.assertArrayEquals(expected, nums);
   }
-
-
 }

@@ -21,6 +21,4 @@ public class Kata10Test {
 
     Assertions.assertEquals(0, profit);
   }
-
-
 }

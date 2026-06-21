@@ -30,5 +30,4 @@ public class Kata11Test {
 
     Assertions.assertEquals(4, profit);
   }
-
 }
